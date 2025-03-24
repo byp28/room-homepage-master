@@ -10,10 +10,13 @@
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-  <header>
-    <h1><a href=""><img src="./images/logo.svg" alt=""></a></h1>
-    <nav>
-      <ul>
+  <header class="w-full py-10 px-20 flex items-center gap-30 max-lg:justify-between max-lg:gap-0 max-lg:px-10 z-3 fixed">
+    <button class="hidden max-lg:block">
+      <img src="./images/icon-hamburger.svg" alt="">
+    </button>
+    <h1 class="max-lg:w-[95%] max-lg:flex max-lg:items-center max-lg:justify-center"><a href=""><img src="./images/logo.svg" alt=""></a></h1>
+    <nav class="max-lg:hidden">
+      <ul class="flex gap-8 text-white font-semibold">
         <li>Home</li>
         <li>Shop</li>
         <li>About</li>
@@ -21,55 +24,77 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <section>
-      <div>
-        <img src="" alt="">
-        <img src="" alt="">
-        <img src="" alt="">
+  <main class="w-full flex flex-col">
+    <section class="flex max-lg:flex-col">
+      <div class="w-full hidden relative z-1 max-lg:block">
+        <img class="w-full mobile-slider-img" src="./images/mobile-image-hero-1.jpg" alt="">
+        <img class="hidden w-full mobile-slider-img" src="./images/mobile-image-hero-2.jpg" alt="">
+        <img class="hidden w-full mobile-slider-img" src="./images/mobile-image-hero-3.jpg" alt="">
+        <div class="absolute bottom-0  z-2 flex right-0">
+          <button class="w-15 h-15 bg-black flex items-center justify-center cursor-pointer hover:bg-neutral-500 btn-prev">
+            <img src="./images/icon-angle-left.svg" alt="">
+          </button>
+          <button class="w-15 h-15 bg-black flex items-center justify-center cursor-pointer hover:bg-neutral-500 btn-next">
+            <img src="./images/icon-angle-right.svg" alt="">
+          </button>
+        </div>
       </div>
-      <div>
-        <div>
-          <h2>Discover innovative ways to decorate</h2>
-          <p>We provide unmatched quality, comfort, and style for property owners across the country. 
+      <div class="w-[55%] max-lg:hidden">
+        <img class="w-full desktop-slider-img" src="./images/desktop-image-hero-1.jpg" alt="">
+        <img class="hidden w-full desktop-slider-img" src="./images/desktop-image-hero-2.jpg" alt="">
+        <img class="hidden w-full desktop-slider-img" src="./images/desktop-image-hero-3.jpg" alt="">
+      </div>
+      <div class="w-[45%] relative max-lg:w-full">
+        <div class="w-full p-18 flex flex-col gap-8 slider">
+          <h2 class="text-4xl font-bold">Discover innovative ways to decorate</h2>
+          <p class="text-base text-neutral-300 font-semibold">We provide unmatched quality, comfort, and style for property owners across the country. 
             Our experts combine form and function in bringing your vision to life. Create a room in your 
             own style with our collection and make your property a reflection of you and what you love.
           </p>
-          <button>Shop now</button>
+          <button class="text-2xl self-start font-semibold">Shop now</button>
         </div>
-        <div>
-          <h2>We are available all across the globe</h2>
-          <p>
+        <div class="hidden p-18 flex flex-col gap-8 slider">
+          <h2 class="text-4xl font-bold">We are available all across the globe</h2>
+          <p class="text-base text-neutral-300 font-semibold">
             With stores all over the world, it's easy for you to find furniture for your home or place of business. 
             Locally, we’re in most major cities throughout the country. Find the branch nearest you using our 
             store locator. Any questions? Don't hesitate to contact us today.
           </p>
           <button>Shop now</button>
         </div>
-        <div>
-          <h2>Manufactured with the best materials</h2>
-          <p>
+        <div class="hidden p-18 flex flex-col gap-8 slider">
+          <h2 class="text-4xl font-bold">Manufactured with the best materials</h2>
+          <p class="text-base text-neutral-300 font-semibold">
             Our modern furniture store provide a high level of quality. Our company has invested in advanced technology 
             to ensure that every product is made as perfect and as consistent as possible. With three decades of 
             experience in this industry, we understand what customers want for their home and office.
           </p>
           <button>Shop now</button>
         </div>
+        <div class="absolute bottom-0 flex max-lg:hidden">
+          <button class="w-20 h-20 bg-black flex items-center justify-center cursor-pointer hover:bg-neutral-500 btn-prev">
+            <img src="./images/icon-angle-left.svg" alt="">
+          </button>
+          <button class="w-20 h-20 bg-black flex items-center justify-center cursor-pointer hover:bg-neutral-500 btn-next">
+            <img src="./images/icon-angle-right.svg" alt="">
+          </button>
+        </div>
       </div>
     </section>
-    <section>
-      <img src="" alt="">
-      <div>
-        <h3>About our furniture</h3>
-        <p>
+    <section class="w-full flex max-lg:flex-col">
+      <img class="w-[28%] max-lg:w-full" src="./images/image-about-dark.jpg" alt="">
+      <div class="w-[44%] max-lg:w-full px-10 py-10 flex flex-col gap-5">
+        <h3 class="text-2xl font-bold">About our furniture</h3>
+        <p class="text-base text-neutral-300 font-semibold">
           Our multifunctional collection blends design and function to suit your individual taste.
           Make each room unique, or pick a cohesive theme that best express your interests and what
           inspires you. Find the furniture pieces you need, from traditional to contemporary styles
           or anything in between. Product specialists are available to help you create your dream space.
         </p>
       </div>
-      <img src="" alt="">
+      <img class="w-[28%] max-lg:w-full" src="./images/image-about-light.jpg" alt="">
     </section>
   </main>
+  <script src="./script.js"></script>
 </body>
 </html>

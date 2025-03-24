@@ -6,6 +6,9 @@ const btn_next = document.querySelector('.btn-next');
 const btn_prev = document.querySelector('.btn-prev');
 const mobile_btn_next = document.querySelector('.mobile-btn-next');
 const mobile_btn_prev = document.querySelector('.mobile-btn-prev');
+const overlay = document.querySelector('#overlay');
+const open_menu = document.querySelector('#open-menu');
+const close_menu = document.querySelector('#close-menu');
 
 function next(){
     sliders[index].classList.add("hidden");
@@ -46,3 +49,10 @@ btn_prev.addEventListener("click",()=> previous())
 
 mobile_btn_next.addEventListener("click",()=> next())
 mobile_btn_prev.addEventListener("click",()=> previous())
+
+open_menu.addEventListener("click",()=>{
+    overlay.classList.toggle('hidden');
+})
+close_menu.addEventListener("click",()=>{
+    overlay.classList.toggle('hidden');
+})
